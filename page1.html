@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Стандартные объекты JavaScript</title>
+    <style>
+        .section {
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        pre {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Стандартные объекты JavaScript</h1>
+    
+    <div class="section">
+        <h2>1. Работа с объектом String</h2>
+        <script>
+            let str = " Hello, JavaScript! ";
+            
+            document.write("<p>Исходная строка: '" + str + "'</p>");
+            document.write("<p>1. Длина строки: " + str.length + "</p>");
+            document.write("<p>2. Обрезание пробелов: '" + str.trim() + "'</p>");
+            document.write("<p>3. Верхний регистр: " + str.toUpperCase() + "</p>");
+            document.write("<p>4. Нижний регистр: " + str.toLowerCase() + "</p>");
+            document.write("<p>5. Замена части строки: " + str.replace("JavaScript", "World") + "</p>");
+            document.write("<p>6. Подстрока (7-12): " + str.substring(7, 12) + "</p>");
+            document.write("<p>7. Разделение строки: " + str.split(" ").join(" | ") + "</p>");
+        </script>
+    </div>
+    
+    <div class="section">
+        <h2>2. Работа с объектом Number</h2>
+        <script>
+            let num = 123.45678;
+            
+            document.write("<p>Исходное число: " + num + "</p>");
+            document.write("<p>1. Число с 2 знаками: " + num.toFixed(2) + "</p>");
+            document.write("<p>2. Экспоненциальная форма: " + num.toExponential(4) + "</p>");
+            document.write("<p>3. Проверка целого: " + Number.isInteger(num) + "</p>");
+            document.write("<p>4. Проверка NaN: " + Number.isNaN(num) + "</p>");
+            document.write("<p>5. Преобразование в строку: " + num.toString() + "</p>");
+            document.write("<p>6. Локальное форматирование: " + num.toLocaleString() + "</p>");
+            document.write("<p>7. Безопасное целое: " + Number.isSafeInteger(num) + "</p>");
+        </script>
+    </div>
+    
+    <div class="section">
+        <h2>3. Работа с объектом Math</h2>
+        <script>
+            document.write("<p>1. Округление вверх: " + Math.ceil(4.3) + "</p>");
+            document.write("<p>2. Округление вниз: " + Math.floor(4.7) + "</p>");
+            document.write("<p>3. Округление: " + Math.round(4.5) + "</p>");
+            document.write("<p>4. Случайное число: " + Math.random() + "</p>");
+            document.write("<p>5. Квадратный корень: " + Math.sqrt(25) + "</p>");
+            document.write("<p>6. Степень: " + Math.pow(2, 3) + "</p>");
+            document.write("<p>7. Абсолютное значение: " + Math.abs(-10) + "</p>");
+        </script>
+    </div>
+    
+    <div class="section">
+        <h2>4. Работа с объектом Date</h2>
+        <script>
+            let now = new Date();
+            
+            document.write("<p>1. Текущая дата: " + now + "</p>");
+            document.write("<p>2. Год: " + now.getFullYear() + "</p>");
+            document.write("<p>3. Месяц: " + (now.getMonth() + 1) + "</p>");
+            document.write("<p>4. День месяца: " + now.getDate() + "</p>");
+            document.write("<p>5. Часы: " + now.getHours() + "</p>");
+            document.write("<p>6. Минуты: " + now.getMinutes() + "</p>");
+            document.write("<p>7. Секунды: " + now.getSeconds() + "</p>");
+        </script>
+    </div>
+</body>
+</html>
