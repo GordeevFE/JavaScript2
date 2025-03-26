@@ -136,4 +136,21 @@
                     let passed = student.score >= 60 ? "Зачет" : "Не зачет";
                     
                     if (passed === "Зачет") passedCount++;
-                    total
+                    totalScore += student.score;
+                    
+                    row.insertCell(0).textContent = index + 1;
+                    row.insertCell(1).textContent = student.lastName;
+                    row.insertCell(2).textContent = student.score;
+                    row.insertCell(3).textContent = percentage + "%";
+                    row.insertCell(4).textContent = passed;
+                });
+                
+                // Обновляем итоги
+                document.getElementById("totalScore").textContent = totalScore;
+                document.getElementById("summary").textContent = 
+                    `Всего студентов: ${students.length}, Сдали зачет: ${passedCount}`;
+            }
+        </script>
+    </div>
+</body>
+</html>
