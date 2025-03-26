@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Передача данных в программу</title>
+    <style>
+        .form-group {
+            margin: 10px 0;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Передача данных в программу</h1>
+    
+    <div>
+        <h2>a. Перенос данных между полями</h2>
+        <div class="form-group">
+            <label>Поле 1:</label>
+            <input type="text" id="field1">
+        </div>
+        <div class="form-group">
+            <label>Поле 2:</label>
+            <input type="text" id="field2">
+        </div>
+        <button onclick="transferData()">Перенести данные</button>
+    </div>
+    
+    <div>
+        <h2>b. Проверка числа и вычисление</h2>
+        <div class="form-group">
+            <label>Введите число:</label>
+            <input type="text" id="numberInput">
+        </div>
+        <button onclick="checkAndCalculate()">Проверить и вычислить</button>
+        <p id="result"></p>
+    </div>
+    
+    <script>
+        // a. Перенос данных между полями
+        function transferData() {
+            let field1 = document.getElementById("field1");
+            let field2 = document.getElementById("field2");
+            field2.value = field1.value;
+        }
+        
+        // b. Проверка числа и вычисление
+        function checkAndCalculate() {
+            let input = document.getElementById("numberInput").value;
+            let resultElement = document.getElementById("result");
+            
+            if (isNaN(input) || input === "") {
+                resultElement.innerHTML = "<span class='error'>Ошибка ввода</span>";
+            } else {
+                let num = parseFloat(input);
+                let calculation = Math.pow(num, 2) + 10; // Пример вычисления
+                resultElement.innerHTML = "Результат: " + calculation;
+            }
+        }
+    </script>
+</body>
+</html>
